@@ -7,7 +7,10 @@ const app = express()
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: [
+        "http://localhost:5173",
+        "https://interview-website-a65ehi8xy-mg6129327-teamvercelapp.vercel.app"
+    ],
     credentials: true
 }))
 
